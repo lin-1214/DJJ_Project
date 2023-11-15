@@ -39,6 +39,7 @@ def step_search(pt1, pt2, partition, i, coefficients):
     for pt in prt:
         if (i==0):
             tmp = calc_util(pt, pt1[1], pt1[2], coefficients)
+            # print(f"pt: {pt}, tmp: {tmp}, smallest: {smallest}")
             if tmp <= smallest:
                 smallest = tmp
                 point = pt
@@ -112,5 +113,6 @@ if (flag):
             optimal_z = partition
 
     print(f"minimum point: ({optimal_x}, {optimal_y}, {optimal_z})")
+    print(f"minimum value: {calc_util(optimal_x, optimal_y, optimal_z, coefficients)}")
 else:
     print("Please generate the convex function again 13(>_O)13")
